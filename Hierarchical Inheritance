@@ -1,0 +1,40 @@
+//Pratyush Saha
+//Prn:24070123078
+//Code:
+
+#include <iostream>
+using namespace std;
+
+class Base {
+public:
+    void greet() { cout << "Hello from Base class" << endl; }
+};
+
+class Derived1 : public Base {
+public:
+    void show1() { cout << "Derived1 specific function" << endl; }
+};
+
+class Derived2 : public Base {
+public:
+    void show2() { cout << "Derived2 specific function" << endl; }
+};
+
+int main() {
+    Derived1 obj1;
+    Derived2 obj2;
+
+    obj1.greet();
+    obj1.show1();
+
+    obj2.greet();
+    obj2.show2();
+
+    return 0;
+}
+
+//OUTPUT:
+//Hello from Base class
+//Derived1 specific function
+//Hello from Base class
+//Derived2 specific function
