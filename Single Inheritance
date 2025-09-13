@@ -1,0 +1,38 @@
+//Pratyush Saha
+//24070123078
+//A3
+//Code:
+
+#include <iostream>
+using namespace std;
+
+class Animal {
+public:
+    string name;
+    Animal(string n) { name = n; }
+    void speak() { cout << name << " makes a sound." << endl; }
+};
+
+class Dog : public Animal {
+public:
+    Dog(string n) : Animal(n) {}
+    void speak() { cout << name << " barks!" << endl; }
+};
+
+class Cat : public Animal {
+public:
+    Cat(string n) : Animal(n) {}
+    void speak() { cout << name << " meows!" << endl; }
+};
+
+int main() {
+    Dog d("Dog");
+    Cat c("Cat");
+    d.speak();
+    c.speak();
+    return 0;
+}
+
+//Output:
+Dog barks!
+Cat meows!
